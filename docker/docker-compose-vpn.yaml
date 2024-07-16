@@ -53,6 +53,6 @@ services:
       - /tmp
       - /var/cache/nginx
     volumes:
-      - ../nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
     restart: always
     logging: *default-logging
