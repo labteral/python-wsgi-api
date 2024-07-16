@@ -1,0 +1,17 @@
+x-logging: &default-logging
+  options:
+    max-size: 50m
+    max-file: 1
+  driver: json-file
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ../config.yaml:/opt/app/config.yaml
+    restart: always
+    logging: *default-logging
