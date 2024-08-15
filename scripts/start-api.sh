@@ -4,6 +4,7 @@ source env.sh
 cd src
 
 uwsgi \
+--master \
 --http :8080 \
 --wsgi-file main.py \
 --callable app \
