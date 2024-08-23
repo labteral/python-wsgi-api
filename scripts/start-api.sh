@@ -3,7 +3,7 @@ cd $(dirname $0)/..
 source env.sh
 cd src
 
-PYTHONUNBUFFERED=1 uwsgi \
+uwsgi \
 --master \
 --http :8080 \
 --wsgi-file main.py \
