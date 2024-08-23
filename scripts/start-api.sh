@@ -9,4 +9,5 @@ uwsgi \
 --wsgi-file main.py \
 --callable app \
 --processes $API_PROCESSES_COUNT \
---threads $API_THREADS_COUNT
+--threads $API_THREADS_COUNT \
+--unbuffered
